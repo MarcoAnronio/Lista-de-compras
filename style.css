@@ -1,0 +1,286 @@
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure consistent box-sizing */
+}
+
+:root {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background-color: #ca3884;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #a52c6b;
+}
+
+/* Body Styling */
+body {
+    margin: 0;
+    width: 100%; 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #080b12;
+}
+
+/* Container Width */
+.container {
+    width: 20.375rem;
+    position: relative;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    flex-direction: column;
+    margin: 4.875rem 2rem 2.75rem;
+    /* Ensure header has a defined width or full width */
+    width: 100%; 
+}
+
+#header-img {
+    align-items: center;
+    display: none;
+    /* Optional: align items if needed */
+}
+
+/* Main Content Styling */
+main {
+    max-width: 390px;
+}
+
+/* Link Styling */
+a {
+    font-weight: 500;
+    font-size: .875rem;
+    line-height: 1rem;
+    text-decoration: none;
+    color: #ca3884;
+}
+
+a:hover {
+    color: #a52c6b;
+}
+
+/* Title Styling */
+h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-top: 1rem;
+}
+
+/* Label and Paragraph Styling */
+label, p {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+
+/* List Styling */
+ul {
+    margin-bottom: 2.25rem;
+}
+
+li, p {
+    list-style: none;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    height: 3.5625rem;
+    align-items: center;
+    border-radius: .75rem;
+    border: 1px solid #d1d5db;
+    margin-bottom: .75rem;
+}
+
+/* Button Styling */
+button {
+    line-height: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+}
+
+/* Input and Button Styling */
+.add-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Ensure it takes full width of parent */
+}
+
+.add-item input {
+    height: 2.75rem;
+    margin-bottom: 1rem;
+    border: 2px solid #d1d5db;
+    border-radius: .75rem;
+    color: #374151;
+    padding-left: 1.125rem;
+}
+
+input:hover {
+    border: 2px solid #b9c2d0;
+}
+
+input:focus {
+    border: 2px solid #ca3884;
+    outline: none;
+}
+
+.add-item button {
+    height: 2.75rem;
+    border-radius: .75rem;
+    background-color: #ca3884;
+    border: none;
+    margin-bottom: 2.5rem;
+}
+
+.add-item button:hover {
+    background-color: #a52c6b;
+}
+
+/* Placeholder Styling */
+::placeholder {
+    color: #9ca3af;
+}
+
+/* List Wrapper Styling */
+.list-wrapper {
+    max-height: 16.5rem;
+    overflow-y: scroll;
+    width: 100%; /* Ensure it takes full width of parent */
+}
+
+/* Custom Checkbox */
+input[type="checkbox"] {
+    appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid #d1d5db;
+    border-radius: 0.25rem;
+    position: relative;
+    cursor: pointer;
+    margin-left: .75rem;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #ca3884;
+    border-color: #ca3884;
+}
+
+input[type="checkbox"]:checked::after {
+    content: '✔';
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+}
+
+input[type="checkbox"]:hover {
+    border-color: #b9c2d0;
+}
+
+/* Delete Button Styling */
+#delete {
+    background-color: white;
+    border: none;
+    margin-right: .75rem;
+}
+
+#delete img:hover {
+    filter: invert(23%) sepia(7%) saturate(1108%) hue-rotate(162deg) brightness(88%) contrast(94%);
+}
+
+/* Label Styling */
+.list-label {
+    padding: .75rem;
+}
+
+/* Footer Styling */
+footer {
+    display: none;
+}
+
+p {
+    background-color: #c93847;
+}
+
+footer img {
+    margin-left: .75rem;
+}
+
+footer label {
+    margin-left: .5rem;
+    color: #fff;
+}
+
+#delete-message {
+    color: #fff;
+    background-color: #c93847;
+    margin: .5em .75rem;
+    border: none;
+}
+
+.show-result {
+    display: block;
+}
+
+/* Media Query */
+@media (min-width: 770px) {
+    #header-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: block;
+        width: 9.72rem;
+        margin-top: 1.5rem;
+    }
+
+    .add-item {
+        flex-direction: row;
+        width: 39.1875rem;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 2.5rem;
+    }
+
+    .add-item input {
+        width: 28.1875rem;
+        flex-grow: 1;
+        margin-bottom: 0; 
+    }
+
+    .add-item button {
+        width: 10rem;
+        margin-bottom: 0;
+    }
+
+    .list-wrapper {
+        width: 39.1875rem;
+    }
+
+    .container {
+        width: 39.1875rem; 
+        justify-content: center;
+    }
+
+    main {
+        max-width: 39.1875rem;
+    }
+}

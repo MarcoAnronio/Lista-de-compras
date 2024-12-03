@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de compras</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <img id="header-img" src="./imagens/logo.png" alt="logo">
+    <header class="container">
+        <a href="#" id="back"><- Voltar</a>
+        <h1>Compras da semana</h1>
+    </header>
+
+    <main class="container">
+        <div class="add-item">
+            <input type="text" name="add-item" id="add-item" placeholder="Adicione um novo item" required />
+            <button type="submit" id="add-button">Adicionar item</button>
+        </div>    
+        <div class="list-wrapper">
+            <ul>
+                <!-- The list will start empty and items will be added dynamically -->
+            </ul>
+        </div>
+    </main>
+
+    <footer class="footer container">
+        <p>
+            <img src="./imagens/warning-circle-filled.svg" alt="">
+            <label>O item foi removido da lista</label>
+            <button id="delete-message"><img src="./imagens/delete-small.svg" alt=""></button>
+        </p>
+    </footer>   
+    <script src="./scripts.js"></script>
+</body>
+</html>
